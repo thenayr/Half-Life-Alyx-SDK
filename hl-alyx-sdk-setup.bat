@@ -41,7 +41,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Looking for sourcemods folder
 ECHO :::::::::::::::::::::::::::::::::::::::
-IF exist "%steam_default_dir%/sourcemods/" ( SET "sourcemods_dir=%steam_default_dir%/sourcemods" ) ELSE ( SET /P sourcemods_dir=Couldn't find sourcemods dir, please specify directory to sourcemods: )
+IF exist "%steam_default_dir%/sourcemods/" ( SET "sourcemods_dir=%steam_default_dir%/sourcemods" ) ELSE ( SET /P sourcemods_dir=Couldn't find sourcemods dir, please specify directory to sourcemods (you may need to create it): )
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Sourcemods dir is set to %sourcemods_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
