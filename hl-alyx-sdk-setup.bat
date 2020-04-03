@@ -5,7 +5,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 SET steam_default_dir=C:/Program Files (x86)/Steam/steamapps
 :: Steam directory check
 SET /P steam_defaults=Use default steam directory %steam_default_dir% (Y\N)?
-IF NOT "%steam_defaults%"=="Y" GOTO SetupSteamDir
+IF /I NOT "%steam_defaults%"=="Y" GOTO SetupSteamDir
 GOTO:file_copy_prompt
 
 :SetupSteamDir
@@ -17,7 +17,7 @@ SET /P steam_default_dir=Enter location of steamapps directory:
 :file_copy_prompt
 IF exist "%steam_default_dir%" ( echo Found steam directory, continuing ) ELSE ( GOTO DontRun )
 SET /P continue_file_copy=Continue SDK setup, requires ~2GB for base install (Y/N)
-IF NOT "%continue_file_copy%"=="Y" GOTO DontRun
+IF /I NOT "%continue_file_copy%"=="Y" GOTO DontRun
 
 :find_alyx
 ECHO :::::::::::::::::::::::::::::::::::::::
@@ -94,12 +94,11 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 
 ECHO DONE...Happy mapping.
+PAUSE
 GOTO:EOF
 
 :DontRun
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Stopping HL Alyx editor setup (cancelled)
 ECHO :::::::::::::::::::::::::::::::::::::::
-
-
 PAUSE
