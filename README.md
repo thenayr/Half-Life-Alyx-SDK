@@ -15,6 +15,11 @@ You MUST ALSO download the `.FGD` files required by Half-Life Alyx to load entit
 ## Modify and run Editor launch script
 Edit the `launch-hl-alyx.bat` file and update the path to match your `sourcemods` directory.  Double click the bat file to launch the editor.
 
+# Known issues
+- Navmesh doesn't appear to be working
+- Running in editor WILL crash the editor
+- Random crashes
+
 # Compiling maps
 Maps *should* compile from the hammer editor, note that you will have to COPY them over to your REAL Half-Life Alyx maps folder in order to actually try them out.  This is possible with +sv_cheats and the `map` command in the console of Half Life Alyx.  
 
