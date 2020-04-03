@@ -4,7 +4,7 @@ The purpose of this repo is to automate the process of enabling the SteamVR envi
 # How-To
 This repo includes a batch (.bat) script that you can run on your machine to faciliate the creation of a Alyx SDK sourcemod.  This can be run as a standalone application that will enable you to use all of the Half-Life Alyx assets to start creating custom Half Life Alyx maps before the official toolkit arrives!  This works because the existing SteamVR environments editor is ALSO based on source 2 and fairly compatible with HL Alyx assets.
 
-## Run the .bat script
+## Run the hl-alyx-sdk-setup.bat script
 The script tries to make some assumptions about where your steam/alyx/steamvr installs are located, but should prompt you if any/all of those don't exist and you will need to manually enter the path.  The script will copy over files that it needs (~2GB) to launch the editor. 
 
 ## Follow additional instructions at the end of .bat script
@@ -12,7 +12,7 @@ Please note that the SDK that gets created DOES NOT include the HL Alyx assets, 
 
 You MUST ALSO download the `.FGD` files required by Half-Life Alyx to load entities into Hammer or none of the assets will work correctly on your map.  You can download those from [Gvarados1 FGD repo](https://github.com/gvarados1/Half-Life-Alyx-FGD)
 
-## Modify and run Editor
+## Modify and run Editor launch script
 Edit the `launch-hl-alyx.bat` file and update the path to match your `sourcemods` directory.  Double click the bat file to launch the editor.
 
 # Compiling maps
