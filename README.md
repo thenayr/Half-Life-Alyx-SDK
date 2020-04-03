@@ -12,7 +12,10 @@ Please note that the SDK that gets created DOES NOT include the HL Alyx assets, 
 
 You MUST ALSO download the `.FGD` files required by Half-Life Alyx to load entities into Hammer or none of the assets will work correctly on your map.  You can download those from [Gvarados1 FGD repo](https://github.com/gvarados1/Half-Life-Alyx-FGD)
 
-## Compiling maps
+## Modify and run Editor
+Edit the `launch-hl-alyx.bat` file and update the path to match your `sourcemods` directory.  Double click the bat file to launch the editor.
+
+# Compiling maps
 Maps *should* compile from the hammer editor, note that you will have to COPY them over to your REAL Half-Life Alyx maps folder in order to actually try them out.  This is possible with +sv_cheats and the `map` command in the console of Half Life Alyx.  
 
 # Why?
