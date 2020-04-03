@@ -1,7 +1,7 @@
 # Half-Life Alyx SDK Description
 The purpose of this repo is to automate the process of enabling the SteamVR environments tools to be used to create and compile maps for use with Half Life Alyx.  Big credit for this script goes to Gvarados [twitch](https://www.twitch.tv/gvarados) as I learned how to do this by watching his live stream while he set this up and painstakingly recreated it on my own.
 
-# How-To
+# How-To Use
 This repo includes a batch (.bat) script that you can run on your machine to faciliate the creation of a Alyx SDK sourcemod.  This can be run as a standalone application that will enable you to use all of the Half-Life Alyx assets to start creating custom Half Life Alyx maps before the official toolkit arrives!  This works because the existing SteamVR environments editor is ALSO based on source 2 and fairly compatible with HL Alyx assets.
 
 ## Run the hl-alyx-sdk-setup.bat script
