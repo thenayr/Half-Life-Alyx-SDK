@@ -22,4 +22,6 @@ Maps *should* compile from the hammer editor, note that you will have to COPY th
 Valve initially promised us SDK tools that would launch side-by-side with Half-Life Alyx, but it turns out that wasn't the case, although they have now informed us they are hard at work at releasing the SDK and/or editor.
 
 # DISCLAIMER
+Not everything works, probably lots of it doesn't, you will most likely encounter crashes periodically.  Save often.
+
 I'm not responsible for anything that happens to your machine if you run this script, please don't sue me.  In addition I'm a complete novice to the Hammer editor, so I have no notion of what is/isn't functioning properly when it comes to that,  but basic world building and assett dropping seems to be working perfectly fine. 
