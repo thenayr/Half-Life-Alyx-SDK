@@ -1,3 +1,4 @@
+
 @ECHO OFF
 ECHO NOTE
 ECHO Please follow instructions at the end of script to extract / download additional needed files!
@@ -41,7 +42,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Looking for sourcemods folder
 ECHO :::::::::::::::::::::::::::::::::::::::
-IF exist "%steam_default_dir%/sourcemods/" ( SET "sourcemods_dir=%steam_default_dir%/sourcemods" ) ELSE ( SET /P sourcemods_dir=Couldn't find sourcemods dir, please specify directory to sourcemods (you may need to create it): )
+IF exist "%steam_default_dir%/sourcemods/" ( SET "sourcemods_dir=%steam_default_dir%/sourcemods" ) ELSE ( SET /P sourcemods_dir=Couldn't find sourcemods dir, please specify directory to sourcemods: )
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Sourcemods dir is set to %sourcemods_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
@@ -101,4 +102,4 @@ GOTO:EOF
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Stopping HL Alyx editor setup (cancelled)
 ECHO :::::::::::::::::::::::::::::::::::::::
-PAUSE
+PAUSE 
