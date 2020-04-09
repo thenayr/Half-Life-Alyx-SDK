@@ -11,17 +11,15 @@ for /f "usebackq tokens=1,2,*" %%i in (`reg query "HKCU\Software\Valve\Steam" /v
 :: Replacing "/"'s with "\" in some cases
 set steampath=%steampath:/=\%
 :: Testing common paths
-if not exist "%steampath%\steam.exe" (
+if not exist %steampath%\steam.exe (
 	if not exist "%ProgramFiles(x86)%\steam\\steam.exe" (
 		if not exist "%ProgramFiles%\steam\steam.exe" (
 			goto DontRun
 		) else (
 			set steampath=%ProgramFiles%\steam
 		)
-	) else set steampath=%ProgramFiles(x86)%\steam
+	) else set steampath=%ProgramFiles(x86)%\steam )
 IF exist "%steampath%" ( echo Found steam directory, continuing ) ELSE ( GOTO DontRun )
-IF /I NOT "%continue_file_copy%"=="Y" GOTO DontRun
-
 
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Looking for Half life alyx directory
@@ -35,7 +33,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Looking for steamvr tools
 ECHO :::::::::::::::::::::::::::::::::::::::
-IF exist "%steampath%/common/SteamVR/" ( SET "steamvr_dir=%steampath%/common/SteamVR" ) ELSE ( SET /P steamvr_dir=Couldn't find SteamVR tools, please specify the directory it is located in or  check you have SteamVR installed )
+IF exist "%steampath%/common/SteamVR/" ( SET "steamvr_dir=%steampath%/common/SteamVR" ) ELSE ( SET /P steamvr_dir=Couldn't find SteamVR tools, please specify the directory it is located in or check you have SteamVR installed )
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO SteamVR dir is set to %steamvr_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
@@ -54,7 +52,7 @@ ECHO Copying SteamVR files....
 ECHO :::::::::::::::::::::::::::::::::::::::
 robocopy "%steamvr_dir%/tools/steamvr_environments/game/bin" "%mod_dir%/game/bin" /s /e /nfl /ndl /njh 
 robocopy "%steamvr_dir%/tools/steamvr_environments/game/core" "%mod_dir%/game/core" /s /e /nfl /ndl /njh /XF pak02*
-start /w "" /D "%mod_dir%\core" %steamvr_dir%/tools/steamvr_environments/game/bin/vpk.exe pak02.vpk
+start /w "" /D "%mod_dir%\core" "%steamvr_dir%/tools/steamvr_environments/game/bin/vpk.exe" pak02.vpk
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Done copying Steam VR files.
 ECHO :::::::::::::::::::::::::::::::::::::::
@@ -77,22 +75,23 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Done replacing Half-Life Alyx dll's
 ECHO :::::::::::::::::::::::::::::::::::::::
 
+robocopy "%~dp0" "%mod_dri%" launch-hl-alyx.bat
 
 ECHO Copied files successfully 
 ECHO ::::::::::::::::NOTE:::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO You MUST download .FGD files from https://github.com/gvarados1/Half-Life-Alyx-FGD and put them into %alyx_sdk_dir%/game/hlvr
-ECHO Run launch-hl-alyx.bat to start it!
+ECHO Run launch-hl-alyx.bat in %mod_dir% to start it!
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 
-ECHO DONE...Happy modding.
+ECHO DONE... Happy modding.
 PAUSE
 GOTO:EOF
 
 :DontRun
 ECHO :::::::::::::::::::::::::::::::::::::::
-ECHO Stopping HL Alyx editor setup (cancelled due to errors)
+ECHO Make sure you have Steam installed to continue
 ECHO :::::::::::::::::::::::::::::::::::::::
 PAUSE 
