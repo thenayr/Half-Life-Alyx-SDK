@@ -4,7 +4,7 @@ ECHO NOTE
 ECHO Make sure you have enough space, about double the game size!
 ECHO Please follow instructions at the end of script to extract / download additional needed files!
 ECHO :::::::::::::::::::::::::::::::::::::::
-pause >nul
+pause
 :: Steam directory check
 :: Getting Steam path from registry
 for /f "usebackq tokens=1,2,*" %%i in (`reg query "HKCU\Software\Valve\Steam" /v "SteamPath"`) do set "steampath=%%~k"
