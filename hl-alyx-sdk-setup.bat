@@ -23,7 +23,6 @@ IF exist "%steampath%" ( echo Found steam directory, continuing ) ELSE ( GOTO Do
 IF /I NOT "%continue_file_copy%"=="Y" GOTO DontRun
 
 
-:find_alyx
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Looking for Half life alyx directory
 ECHO :::::::::::::::::::::::::::::::::::::::
@@ -32,7 +31,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Alyx dir is set to %alyx_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
 
-:find_steamvr
+
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Looking for steamvr tools
 ECHO :::::::::::::::::::::::::::::::::::::::
@@ -41,16 +40,15 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO SteamVR dir is set to %steamvr_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
 
-:find_sourcemods
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Select destination folder
 ECHO :::::::::::::::::::::::::::::::::::::::
-set /p sourcemods_dir= Specify the folder you want to place everything into
+set /p mod_dir= Specify the folder you want to place everything into
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Final folder will be in %sourcemods_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
 
-:file_copy
+
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Copying SteamVR files....
 ECHO :::::::::::::::::::::::::::::::::::::::
@@ -79,9 +77,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Done replacing Half-Life Alyx dll's
 ECHO :::::::::::::::::::::::::::::::::::::::
 
-GOTO Success
 
-:Success
 ECHO Copied files successfully 
 ECHO ::::::::::::::::NOTE:::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
@@ -97,6 +93,6 @@ GOTO:EOF
 
 :DontRun
 ECHO :::::::::::::::::::::::::::::::::::::::
-ECHO Stopping HL Alyx editor setup cancelled due to errors
+ECHO Stopping HL Alyx editor setup (cancelled due to errors)
 ECHO :::::::::::::::::::::::::::::::::::::::
 PAUSE 
