@@ -5,18 +5,17 @@ The purpose of this repo is to automate the process of enabling the SteamVR envi
 This repo includes a batch (.bat) script that you can run on your machine to faciliate the creation of a Alyx SDK sourcemod.  This can be run as a standalone application that will enable you to use all of the Half-Life Alyx assets to start creating custom Half Life Alyx maps before the official toolkit arrives!  This works because the existing SteamVR environments editor is ALSO based on source 2 and fairly compatible with HL Alyx assets.
 
 ## Run the hl-alyx-sdk-setup.bat script
-The script tries to make some assumptions about where your steam/alyx/steamvr installs are located, but should prompt you if any/all of those don't exist and you will need to manually enter the path.  The script will copy over files that it needs (~2GB) to launch the editor. 
+The script tries to locate where your steam/alyx/steamvr installs are located, but should prompt you if any/all of those don't exist.  The script will copy over files that it needs (¬2x48GB) to launch the editor. 
 
 ## Follow additional instructions at the end of .bat script
-Please note that the SDK that gets created DOES NOT include the HL Alyx assets,  these come from `pak_01.dir` in your EXISTING ACTUAL `Half-Life Alyx/game/hlvr` directory.  This script does nothing to automate the extraction of those assets into the newly created `Half-Life Alyx SDK` directory.   This is a manual process and you will have to use a tool like GCFScape or VRF to extract the folders from the VPK file into the `Half-Life Alyx SDK/game/hlvr/` directory created by this script. 
 
-You MUST ALSO download the `.FGD` files required by Half-Life Alyx to load entities into Hammer or none of the assets will work correctly on your map.  You can download those from [Gvarados1 FGD repo](https://github.com/gvarados1/Half-Life-Alyx-FGD)
+You MUST download the `.FGD` files required by Half-Life Alyx to load entities into Hammer or none of the entities will show up correctly on your map.  You can download those from [Gvarados1 FGD repo](https://github.com/gvarados1/Half-Life-Alyx-FGD)
 
 ## Modify and run Editor launch script
-Edit the `launch-hl-alyx.bat` file and update the path to match your `sourcemods` directory.  Double click the bat file to launch the editor.
+Edit the `launch-hl-alyx.bat` file and update the path to match your `sourcemods` directory ***if needed***.  Double click the bat file to launch the editor.
 
 # Known issues
-- Navmesh doesn't appear to be working
+- Navmesh doesn't appear to be working - see other guides for fixes
 - Running in editor WILL crash the editor
 - Random crashes
 
@@ -25,6 +24,7 @@ Maps *should* compile from the hammer editor, note that you will have to COPY th
 
 # Why?
 Valve initially promised us SDK tools that would launch side-by-side with Half-Life Alyx, but it turns out that wasn't the case, although they have now informed us they are hard at work at releasing the SDK and/or editor.
+Turns out they already shipped the SDK tools on Dota 2, Destinations and SteamVR Home which happen to be compatible with HL:A.
 
 # DISCLAIMER
 Not everything works, probably lots of it doesn't, you will most likely encounter crashes periodically.  Save often.
