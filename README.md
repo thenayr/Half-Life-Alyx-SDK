@@ -11,6 +11,8 @@ The script tries to locate where your steam/alyx/steamvr installs are located, b
 
 You MUST download the `.FGD` files required by Half-Life Alyx to load entities into Hammer or none of the entities will show up correctly on your map.  You can download those from [Gvarados1 FGD repo](https://github.com/gvarados1/Half-Life-Alyx-FGD)
 
+You would prefer to enable readonly by setting `disable_readonly_assets` to 0 in hlvr\gameinfo.gi, create a new folder next to hlvr then adding that folder at the top of searchpaths as game in gameinfo (follow the existing formatting) eg: `Game    mymod` before Game hlvr
+Addons are supported by adding `AddonsRoot addons` (and creating the folder) in searchpaths section of gameinfo.gi
 ## Modify and run Editor launch script
 Edit the `launch-hl-alyx.bat` file and update the path to match your `sourcemods` directory ***if needed***.  Double click the bat file to launch the editor.
 
