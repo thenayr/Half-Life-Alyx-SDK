@@ -34,7 +34,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Looking for steamvr tools
 ECHO :::::::::::::::::::::::::::::::::::::::
-IF exist "%steampath%/common/SteamVR/" ( SET "steamvr_dir=%steampath%/common/SteamVR" ) ELSE ( SET /P steamvr_dir=Couldn't find SteamVR tools, please specify the directory it is located in or check you have SteamVR installed )
+IF exist "%steampath%/steamapps/common/SteamVR/" ( SET "steamvr_dir=%steampath%/steamapps/common/SteamVR" ) ELSE ( SET /P steamvr_dir=Couldn't find SteamVR tools, please check you have SteamVR installed or specify the directory now:  )
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO SteamVR dir is set to %steamvr_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
