@@ -82,7 +82,7 @@ ECHO Copied files successfully
 ECHO ::::::::::::::::NOTE:::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
-ECHO You MUST download .FGD files from https://github.com/gvarados1/Half-Life-Alyx-FGD and put them into %alyx_sdk_dir%/game/hlvr
+ECHO You MUST download .FGD files from https://github.com/gvarados1/Half-Life-Alyx-FGD and put them into %mod_dir%/game/hlvr
 ECHO Run launch-hl-alyx.bat in %mod_dir% to start it!
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
