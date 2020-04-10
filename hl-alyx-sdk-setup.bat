@@ -25,7 +25,7 @@ IF exist "%steampath%" ( echo Found steam directory, continuing ) ELSE ( GOTO Do
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Looking for Half life alyx directory
 ECHO :::::::::::::::::::::::::::::::::::::::
-IF exist "%steampath%/common/Half-Life Alyx/" ( SET "alyx_dir=%steampath%/common/Half-Life Alyx/" ) ELSE ( SET /P alyx_dir=Couldn't find HL:A, please specify the directory it is located in or check you have Half-Life Alyx installed )
+IF exist "%steampath%/steamapps/common/Half-Life Alyx/" ( SET "alyx_dir=%steampath%/steamapps/common/Half-Life Alyx/" ) ELSE ( SET /P alyx_dir=Couldn't find HL:A, please specify check you have Half-Life Alyx installed or specify the directory now:  )
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Alyx dir is set to %alyx_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
