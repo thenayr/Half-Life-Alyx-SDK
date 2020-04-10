@@ -84,6 +84,8 @@ ECHO Done replacing Half-Life Alyx dll's
 ECHO :::::::::::::::::::::::::::::::::::::::
 
 robocopy "%~dp0." "%mod_dir%" launch-hl-alyx.bat /nfl /ndl /njh
+robocopy "%~dp0./resource" "%mod_dir%/game/hlvr" gameinfo.gi
+robocopy "%~dp0./resource" "%mod_dir%/game/core/tools/images/splash_screen" splash_screen.png
 
 ECHO Copied files successfully 
 ECHO ::::::::::::::::NOTE:::::::::::::::::::
