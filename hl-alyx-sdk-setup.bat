@@ -18,7 +18,7 @@ if not exist %steampath%\steam.exe (
 		) else (
 			set steampath=%ProgramFiles%\steam
 		)
-	) else set steampath=%ProgramFiles(x86)%\steam 
+	) else set "steampath=%ProgramFiles(x86)%\steam"
 )
 IF exist "%steampath%" ( echo Found steam directory, continuing ) ELSE ( GOTO DontRun )
 
