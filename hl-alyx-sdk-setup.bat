@@ -76,7 +76,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Done replacing Half-Life Alyx dll's
 ECHO :::::::::::::::::::::::::::::::::::::::
 
-robocopy "%~dp0" "%mod_dri%" launch-hl-alyx.bat
+robocopy "%~dp0." "%mod_dir%" launch-hl-alyx.bat /nfl /ndl /njh
 
 ECHO Copied files successfully 
 ECHO ::::::::::::::::NOTE:::::::::::::::::::
