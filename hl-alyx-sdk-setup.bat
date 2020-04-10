@@ -44,7 +44,7 @@ ECHO Select destination folder
 ECHO :::::::::::::::::::::::::::::::::::::::
 set /p mod_dir= Specify the folder you want to place everything into
 ECHO :::::::::::::::::::::::::::::::::::::::
-ECHO Final folder will be in %sourcemods_dir%
+ECHO Final folder will be in %mod_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
 
 
