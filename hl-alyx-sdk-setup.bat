@@ -16,7 +16,7 @@ if not exist %steampath%\steam.exe (
 		if not exist "%ProgramFiles%\steam\steam.exe" (
 			goto DontRun
 		) else (
-			set steampath=%ProgramFiles%\steam
+			set "steampath=%ProgramFiles%\steam"
 		)
 	) else set "steampath=%ProgramFiles(x86)%\steam"
 )
