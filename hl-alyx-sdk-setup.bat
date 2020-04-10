@@ -91,6 +91,7 @@ ECHO Copied files successfully
 ECHO ::::::::::::::::NOTE:::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
+ECHO You MUST extract pak01_dir.vpk from %alyx_dir%/game/hlvr into %mod_dir%/game/hlvr/ or you will have NO Alyx assets in Hammer
 ECHO You MUST download .FGD files from https://github.com/gvarados1/Half-Life-Alyx-FGD and put them into %mod_dir%/game/hlvr
 ECHO Run launch-hl-alyx.bat in %mod_dir% to start it!
 ECHO :::::::::::::::::::::::::::::::::::::::
