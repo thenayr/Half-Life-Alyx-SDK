@@ -52,7 +52,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Copying SteamVR files....
 ECHO :::::::::::::::::::::::::::::::::::::::
 robocopy "%steamvr_dir%/tools/steamvr_environments/game/bin" "%mod_dir%/game/bin" /s /e /nfl /ndl /njh 
-robocopy "%steamvr_dir%/tools/steamvr_environments/game/core" "%mod_dir%/game/core" /s /e /nfl /ndl /njh*
+robocopy "%steamvr_dir%/tools/steamvr_environments/game/core" "%mod_dir%/game/core" /s /e /nfl /ndl /njh
 start /w "" /D "%mod_dir%\/game/core" "%steamvr_dir%/tools/steamvr_environments/game/bin/win64/vpk.exe" pak02.vpk
 start /w "" /D "%mod_dir%\/game/core" "%steamvr_dir%/tools/steamvr_environments/game/bin/win64/vpk.exe" pak01.vpk
 robocopy "%mod_dir%\/game/core/pak02" "%mod_dir%\/game/core" /s /e /nfl /ndl /njh
