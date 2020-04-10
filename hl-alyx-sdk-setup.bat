@@ -42,7 +42,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Select destination folder
 ECHO :::::::::::::::::::::::::::::::::::::::
-set /p mod_dir= Specify the folder you want to place everything into
+set /p mod_dir= Specify the folder you want to place everything into: 
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Final folder will be in %mod_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
