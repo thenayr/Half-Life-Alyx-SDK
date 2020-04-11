@@ -42,7 +42,7 @@ ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Select destination folder
 ECHO :::::::::::::::::::::::::::::::::::::::
-set /p mod_dir= Specify the folder you want to place everything into: 
+set /p mod_dir= Specify the folder you want to place SDK into (warning: DO NOT PLACE IN YOUR HL ALYX DIRECTORY): 
 ECHO :::::::::::::::::::::::::::::::::::::::
 ECHO Final folder will be in %mod_dir%
 ECHO :::::::::::::::::::::::::::::::::::::::
@@ -53,6 +53,7 @@ ECHO Copying SteamVR files....
 ECHO :::::::::::::::::::::::::::::::::::::::
 robocopy "%steamvr_dir%/tools/steamvr_environments/game/bin" "%mod_dir%/game/bin" /s /e /nfl /ndl /njh 
 robocopy "%steamvr_dir%/tools/steamvr_environments/game/core" "%mod_dir%/game/core" /s /e /nfl /ndl /njh
+robocopy "%steamvr_dir%/tools/steamvr_environments/content/core" "%mod_dir%/content/hlvr" /s /e /nfl /ndl /njh
 start /w "" /D "%mod_dir%\/game/core" "%steamvr_dir%/tools/steamvr_environments/game/bin/win64/vpk.exe" pak02.vpk
 start /w "" /D "%mod_dir%\/game/core" "%steamvr_dir%/tools/steamvr_environments/game/bin/win64/vpk.exe" pak01.vpk
 robocopy "%mod_dir%\/game/core/pak02" "%mod_dir%\/game/core" /s /e /nfl /ndl /njh
