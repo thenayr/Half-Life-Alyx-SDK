@@ -11,7 +11,7 @@ for /f "usebackq tokens=1,2,*" %%i in (`reg query "HKCU\Software\Valve\Steam" /v
 :: Replacing "/"'s with "\" in some cases
 set steampath=%steampath:/=\%
 :: Testing common paths
-if not exist %steampath%\steam.exe (
+if not exist "%steampath%\steam.exe" (
 	if not exist "%ProgramFiles(x86)%\steam\steam.exe" (
 		if not exist "%ProgramFiles%\steam\steam.exe" (
 			goto DontRun
